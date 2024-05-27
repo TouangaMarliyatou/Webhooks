@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 
 // Webhook endpoint
 app.post('/webhook', (req, res) => {
+    console.log('Received payload:', req.body); // Log the received payload
+
     const event = req.body;
 
     // Verify the event is a push event
